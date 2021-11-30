@@ -140,10 +140,10 @@ background: none;
 
 .nav__gradient {
   position: absolute;
+  height: 50px;
 left: 92.5%;
 right: 0%;
-top: 29.48%;
-bottom: 63.82%;
+top: 150px;
 
 background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
 }
@@ -277,6 +277,7 @@ width: 320px;
 .page__logo {
   position: absolute;
   left: 15%;
+  top: 16px;
 }
 
 .page__logo-line, .page-phone, .page-chat, 
@@ -287,41 +288,41 @@ position: absolute;
 .page-phone {
   left: 57.91%;
 right: 36.99%;
-top: 4.76%;
+top: 25px;
 bottom: 87.3%;
 }
 
 .page-chat {
   left: 65.05%;
 right: 29.85%;
-top: 4.76%;
+  top: 25px;
 bottom: 87.3%;
 }
 
 .page-profile {
   left: 72.19%;
 right: 22.7%;
-top: 4.76%;
+  top: 25px;
 bottom: 87.3%;
 }
 
 .page__logo-line {
   left: 80%;
-  top: 5.56%;
+  top: 25px;
   bottom: 88.1%;
 }
 
 .page__repair {
   left: 82.65%;
 right: 12.24%;
-top: 4.76%;
+  top: 25px;
 bottom: 87.3%;
 }
 
 .page__checkstatus {
   left: 89.8%;
 right: 5.1%;
-top: 4.76%;
+  top: 25px;
 bottom: 87.3%;
 }
 
@@ -347,10 +348,12 @@ max-height: 207px;
 margin-left: 30px;
 border-radius: 6px;
 }
+
+.nav__gradient {
+  height: 50px;
+  top: 160px;
 }
-
-
-
+}
 
 @media (min-width:1120px) {
 
