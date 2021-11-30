@@ -3,6 +3,9 @@
   padding: 0;
   margin: 0;
 }
+body {
+  background-color: #F8F8F8;
+}
 .page {
   width: 100vw;
   max-width: 1120px;
@@ -10,72 +13,89 @@
   max-height: 100%;
 }
 
-.page__header{
+.page-header{
   box-sizing: border-box;
     width: 100%;
     height: 88px;
+
     background: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 12px;
     box-shadow: 0 2px 0 #D9FFF5;
     margin: 0 auto;
     border-bottom: 2px solid #B8FFEC;
 }
 
-.page-first-logo-line,.page-phone, .page-chat, 
+.page__first-logo-line, .page-phone, .page-chat,
 .page-profile, .main__logo-viewport1120 {
   display: none;
 }
 
-.burger__menu {
-    outline: none;
-    border: 0;
-    background: transparent;
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
 }
 
-.page__burger {
+button:hover:not(.about-us__more) {
+  border: 3px solid #B8FFEC;
+}
+
+.page__left-side-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page__burger-menu{
+  background: #FF3E79;
+  border-radius: 20px;
     width: 40px;
     height: 40px;
-    left: 5%;
-right: 82.5%;
-top: 4.02%;
-bottom: 89.28%;
+  margin: 10px;
+  padding-top: 5px;
 }
 
 .page__logo {
   width: 96px;
   height: 50px;
-left: 22.73%;
-right: 47.1%;
-top: 3.11%;
-bottom: 88.37%;
+  margin: 5px;
 }
 
-.page__logo-line {
-  left: 58.12%;
-right: 41.25%;
-top: 4.69%;
-bottom: 89.95%;
+.page__right-side-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .page__repair {
   width: 40px;
   height: 40px;
-  left: 65%;
-right: 22.5%;
-top: 4.02%;
-bottom: 89.28%;
+  background: #FF3E79;
+  border-radius: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 4px;
+}
+
+.page__second-logo-line {
+  width: 2px;
+  height: 32px;
+  background: #EAEAEA;
+  border-radius: 1px;
 }
 
 .page__checkstatus {
   width: 40px;
   height: 40px;
-  left: 82.5%;
-right: 5%;
-top: 4.02%;
-bottom: 89.28%;
+  background: #FF3E79;
+  border-radius: 20px;
+  margin-right: 10px;
+  padding-top: 4px;
 }
 
 .main {
@@ -114,6 +134,7 @@ width: 100%;
 }
 
 .nav__menu {
+  box-sizing: border-box;
   padding-left: 0px;
   list-style-type: none;
   display: flex;
@@ -121,50 +142,47 @@ width: 100%;
   overflow: scroll;
 }
 
-.nav__item {
-display: inline-block;
-  font-family: 'TT Lakes Medium';
-  position: relative;
-  left: 15px;
-  flex: 0 0 auto;
-  height: 40px;
-
-  background: #FFFFFF;
-box-sizing: border-box;
-border-radius: 6px;
-padding: 5px;
-margin-right: 15px;
-border: none;
-background: none;
-}
-
-.nav__gradient {
+.nav__menu::after{
+  content: " ";
   position: absolute;
-  height: 50px;
-left: 92.5%;
-right: 0%;
-top: 150px;
-
-background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+  height: 70px;
+  left: 92.5%;
+  right: 0%;
+  top: 150px;
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
 }
 
 .nav__menu::-webkit-scrollbar {
   width: 0;
 }
 
+.nav__item {
+  display: inline-block;
+  font-family: 'TT Lakes Medium';
+  letter-spacing: -0.2px;
+  flex: 0 0 auto;
+  height: 40px;
+  box-sizing: border-box;
+
+  margin: 5px;
+  border-radius: 6px;
+  padding: 6px 15px 5px 15px;
+  border: 2px solid #F8F8F8;
+}
+
   .nav__link {
 font-size: 16px;
 line-height: 24px;
 color: #7E7E82;
-letter-spacing: -0.2px;
+box-sizing: border-box;
   }
   
   .nav__item:hover {
+box-sizing: border-box;
 background-color: #FFFFFF;
 border: 2px solid #B8FFEC;
-box-sizing: border-box;
 border-radius: 6px;
-padding: 5px;
+padding: 6px 15px;
   }
 
 .nav__link:active,
@@ -221,21 +239,16 @@ width: 320px;
   vertical-align: middle;
 }
 
-#about-us__more-check {
-  opacity: 0;
-  position: absolute;
-}
+.about-us__more {
+  font-family: 'TT Lakes Medium';
+  font-size: 16px;
+  line-height: 24px;
 
-#about-us__more-check ~ .about-us__more:after {
-  content: 'Читать далее';
-}
-
-#about-us__more-check:checked ~ .about-us__more:after {
-  content: 'Свернуть';
-}
-
-#about-us__more-check:checked ~ .about-us__text {
-  height: auto;
+  letter-spacing: -0.2px;
+  width: 150px;
+  outline: none;
+  border: 0;
+  background: transparent;
 }
 
 .about-us-photo {
@@ -261,69 +274,74 @@ width: 320px;
   .main__header {
     margin-bottom: 12px;
   }
-  .page-first-logo-line, .page-phone, .page-chat, .page-profile {
+
+  .page__first-logo-line, .page-phone, .page-chat,
+  .page-profile {
     display: block;
   }
 
-  .page__burger {
-    margin-left: 24px;
+  .page__left-side-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
-.page-first-logo-line {
-  position: absolute;
-  margin-left: 11%;
-}
+  .page__burger-menu{
+    background: #FF3E79;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    padding-top: 5px;
+  }
 
-.page__logo {
-  position: absolute;
-  left: 15%;
-  top: 16px;
-}
+  .page__first-logo-line {
+    width: 2px;
+    height: 32px;
+    background: #EAEAEA;
+    border-radius: 1px;
+    margin-right: 15px;
+  }
 
-.page__logo-line, .page-phone, .page-chat, 
-.page-profile, .page__repair, .page__checkstatus {
-position: absolute;
-}
+  .page__logo {
+    width: 96px;
+    height: 50px;
+    margin: 5px;
+  }
+
+  .page__middle-side-elements {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
 .page-phone {
-  left: 57.91%;
-right: 36.99%;
-top: 25px;
-bottom: 87.3%;
+  width: 40px;
+  height: 40px;
+  background: #FF3E79;
+  border-radius: 20px;
+  padding-top: 5px;
+  margin-right: 20px;
 }
 
 .page-chat {
-  left: 65.05%;
-right: 29.85%;
-  top: 25px;
-bottom: 87.3%;
+  width: 40px;
+  height: 40px;
+  background: #FF3E79;
+  border-radius: 20px;
+  padding-top: 5px;
+  margin-right: 20px;
 }
 
 .page-profile {
-  left: 72.19%;
-right: 22.7%;
-  top: 25px;
-bottom: 87.3%;
-}
-
-.page__logo-line {
-  left: 80%;
-  top: 25px;
-  bottom: 88.1%;
-}
-
-.page__repair {
-  left: 82.65%;
-right: 12.24%;
-  top: 25px;
-bottom: 87.3%;
-}
-
-.page__checkstatus {
-  left: 89.8%;
-right: 5.1%;
-  top: 25px;
-bottom: 87.3%;
+  width: 40px;
+  height: 40px;
+  background: #FF3E79;
+  border-radius: 20px;
+  padding-top: 5px;
 }
 
 .about-us {
@@ -349,10 +367,6 @@ margin-left: 30px;
 border-radius: 6px;
 }
 
-.nav__gradient {
-  height: 50px;
-  top: 160px;
-}
 }
 
 @media (min-width:1120px) {
@@ -361,56 +375,81 @@ border-radius: 6px;
     height: 535px ;
   }
 
-.page__header {
+  .main__repair:hover::after,
+  .main__checkstatus:hover::after{
+    opacity: 0.8;
+  }
+
+.page-header {
 display: none;
 }
 
 .main__logo-viewport1120 {
   display: flex;
-  width: 400px;
-  flex-direction: row;
-justify-content: flex-end;
-margin-left: 650px;
-margin-top: -60px;
+  width: 780px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.page__repair2 {
-margin-right: 25px;
-display: flex;
-}
-
-.page__repair2::before {
-  content: "Оставить заявку";
-  width: 130px;
+.main__repair {
+  width: 190px;
   font-family: 'TT Lakes Medium';
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #1B1C21;
-
-  margin-right: 13px;
-  padding-top: 8px;
-}
-
-.page__checkstatus2 {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 20px;
+  text-decoration: none;
 }
+  .btn-circle::after {
+    background: #FF3E79;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
 
-.page__checkstatus2::before {
-  content: "Cтатус ремонта";
-  width: 125px;
+  .main__repair::after {
+    content: " ";
+    display: block;
+    background-image: url(img/Repair.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .main__checkstatus {
+  width: 180px;
   font-family: 'TT Lakes Medium';
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #1B1C21;
-  
-  margin-right: 13px;
-  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+    text-decoration: none;
 }
+  .btn-circle2::after {
+    background: #FF3E79;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+
+  .main__checkstatus::after {
+  content: " ";
+  display: block;
+  background-image: url(img/checkstatus.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 
 .main__header {
   padding-top: 25px;
+  display: flex;
 }
 
 .main__text::before {
@@ -443,8 +482,8 @@ margin-left: 25px;
   border-radius: 6px;
 }
 
-  .nav__gradient {
-    background: none;
+  .nav__menu::after {
+    display: none;
   }
 }
 
