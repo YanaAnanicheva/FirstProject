@@ -177,7 +177,7 @@ color: #7E7E82;
 box-sizing: border-box;
   }
   
-  .nav__item:hover {
+  .nav__item:active {
 box-sizing: border-box;
 background-color: #FFFFFF;
 border: 2px solid #B8FFEC;
@@ -185,7 +185,7 @@ border-radius: 6px;
 padding: 6px 15px;
   }
 
-.nav__link:active,
+/*.nav__link:active,*/
 .nav__link:hover,
 .nav__link {
   text-decoration: none;
