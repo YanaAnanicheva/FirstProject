@@ -19,7 +19,8 @@ button {
     background: transparent;
 }
 button:hover{
-    opacity: 0.8;
+    opacity: 0.6;
+    transition-duration: 0.5s;
 }
 
 ul {
