@@ -1,0 +1,163 @@
+* {
+    color:black;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #F8F8F8;
+    width: 100vw;
+    height: 234px;
+    max-width: 1120px;
+    margin: auto;
+    max-height: 100%;
+}
+
+button {
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+
+.brands-logo-table__link{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.brands-logo-table__link::before{
+    content: '';
+    display: block;
+    width: 7.5px;
+    height: 7.5px;
+    border: 2px solid #FF3E79;
+    border-left: transparent;
+    border-bottom: transparent;
+    transform: rotate(45deg);
+    margin-left: 11px;
+    margin-top: 13px;
+}
+
+.brands-logo-table__list {
+    list-style-type: none;
+}
+
+.brands-menu-header {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 80px;
+    background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 98.61%);
+}
+
+.brands-menu-header__text {
+    box-sizing: border-box;
+    font-family: "TT Lakes Regular";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 16px;
+
+    color: #7E7E82;
+}
+
+.brands-logo-table__list {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    max-width: 100%;
+}
+
+.brands-logo-table__item {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    height: 72px;
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-shrink: 0;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.swiper-wrapper__gradient {
+    position: absolute;
+    width: 30px;
+    height: 90px;
+    right: 0;
+    top: 87px;
+    z-index: 10;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+}
+
+.brands-logo-table__more {
+    font-family: "TT Lakes Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+
+    display: none;
+}
+
+.brands-logo-table__more::before {
+    content: url(img/arrow_down.svg);
+    margin-right: 8px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Black';
+    src: url('fonts/TTLakes-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('fonts/TTLakes-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
