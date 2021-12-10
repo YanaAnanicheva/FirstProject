@@ -1,28 +1,10 @@
-// const swiper = new Swiper('.swiper', {
-//
-//
-//     // Optional parameters
-//     direction: 'horizontal',
-//     loop: true,
-//
-//     // If we need pagination
-//     pagination: {
-//         el: '.swiper-pagination',
-//     },
-//     centeredSlides: true,
-//
-// });
-
 let swiper= Swiper;
 let init = false;
-
-
-
 /* Which media query
 **************************************************************/
 function swiperMode() {
-    let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
-    let tablet = window.matchMedia('(min-width: 769px) and (max-width: 1024px)');
+    let mobile = window.matchMedia('(min-width: 320px) and (max-width: 767px)');
+    let tablet = window.matchMedia('(min-width: 768px) and (max-width: 1024px)');
     let desktop = window.matchMedia('(min-width: 1025px)');
 
     // Enable (for mobile)
@@ -50,7 +32,7 @@ function swiperMode() {
 
                 breakpoints: {
 
-                    767: {
+                    768: {
                         slidesPerView: 1,
                         spaceBetween: 0,
                         effect: 'coverflow',
@@ -94,4 +76,25 @@ window.addEventListener('load', function() {
 **************************************************************/
 window.addEventListener('resize', function() {
     swiperMode();
+});
+
+
+let showAllBrands = document.querySelector(".brands-logo-table__more");
+let hideAllBrands = document.querySelector(".brands-logo-table__less");
+let hiddenBrands = document.querySelector(".hidden-brands")
+
+showAllBrands.addEventListener('click', function () {
+    showAllBrands.classList.remove("show");
+    hideAllBrands.classList.add("display-block");
+
+    hiddenBrands.classList.remove("hidden-brands");
+    hiddenBrands.classList.add("show-hidden-brands");
+});
+
+hideAllBrands.addEventListener('click', function () {
+    showAllBrands.classList.add("show");
+    hideAllBrands.classList.remove("display-block");
+
+    hiddenBrands.classList.add("hidden-brands");
+    hiddenBrands.classList.remove("show-hidden-brands");
 });
