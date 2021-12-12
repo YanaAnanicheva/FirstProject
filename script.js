@@ -81,20 +81,25 @@ window.addEventListener('resize', function() {
 
 let showAllBrands = document.querySelector(".brands-logo-table__more");
 let hideAllBrands = document.querySelector(".brands-logo-table__less");
-let hiddenBrands = document.querySelector(".hidden-brands")
+let hiddenBrands = document.querySelectorAll(".hidden-brands")
 
 showAllBrands.addEventListener('click', function () {
     showAllBrands.classList.remove("show");
     hideAllBrands.classList.add("display-block");
 
-    hiddenBrands.classList.remove("hidden-brands");
-    hiddenBrands.classList.add("show-hidden-brands");
+
+    for (let i = 0; i < hiddenBrands.length; i++) {
+        hiddenBrands[i].classList.remove("hidden-brands");
+        hiddenBrands[i].classList.add("show-hidden-brands");
+    }
 });
 
 hideAllBrands.addEventListener('click', function () {
     showAllBrands.classList.add("show");
     hideAllBrands.classList.remove("display-block");
 
-    hiddenBrands.classList.add("hidden-brands");
-    hiddenBrands.classList.remove("show-hidden-brands");
+    for (let i = 0; i < hiddenBrands.length; i++) {
+        hiddenBrands[i].classList.add("hidden-brands");
+        hiddenBrands[i].classList.remove("show-hidden-brands");
+    }
 });

@@ -40,6 +40,18 @@ button {
     margin-top: 13px;
 }
 
+.brands-logo-table__link:hover{
+    background-color: #FF3E79;
+    transition-duration: 0.5s;
+}
+
+.brands-logo-table__link:hover::before {
+    border: 2px solid #ffffff;
+    border-left: transparent;
+    border-bottom: transparent;
+    transition-duration: 0.5s;
+}
+
 .brands-logo-table__list {
     list-style-type: none;
 }
@@ -85,7 +97,6 @@ img {
     align-items: center;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
-    box-sizing: border-box;
     border-radius: 6px;
     margin-top: 16px;
     margin-left: 16px;
@@ -108,7 +119,7 @@ img {
 .brands-logo-table__more {
     width: 130px;
     height: 24px;
-    display: block;
+
     font-family: "TT Lakes Medium";
     font-style: normal;
     font-weight: 500;
@@ -132,7 +143,6 @@ img {
 .brands-logo-table__less {
     width: 130px;
     height: 24px;
-    display: block;
     font-family: "TT Lakes Medium";
     font-style: normal;
     font-weight: 500;
@@ -195,6 +205,20 @@ img {
 
 }
 
+@media (min-width: 1120px) {
+
+    .brands-logo-table__item  {
+        width: 240px;
+        margin-left: 32px;
+    }
+
+    .hidden-brands:nth-last-child(n+4) {
+        display: flex;
+    }
+
+
+
+}
 
 
 
