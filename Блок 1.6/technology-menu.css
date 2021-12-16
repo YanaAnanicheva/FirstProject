@@ -181,7 +181,11 @@ button {
     vertical-align: middle;
 }
 
-
+.swiper-slide {
+    box-sizing: border-box;
+    width: 240px !important;
+    height: 160px !important;
+}
 
 @media (min-width: 320px) and (max-width: 767px) {
     .hidden-tech {

@@ -40,13 +40,6 @@
         touch-action: pan-x
     }
 
-    .swiper-slide {
-        flex-shrink: 0;
-        width: 100%;
-        height: 100%;
-        transition-property: transform
-    }
-
     .swiper-slide-invisible-blank {
         visibility: hidden
     }
@@ -606,18 +599,12 @@
     }
 
         .swiper {
-            width: 100% !important;
+            width: 100vw !important;
         }
 
         .swiper-wrapper {
-            width: 100% !important;
+            width: 320px !important;
             box-sizing: border-box;
-        }
-
-        .swiper-slide {
-            box-sizing: border-box;
-            width: 240px !important;
-            height: 160px !important;
         }
 
         .swiper-pagination {
