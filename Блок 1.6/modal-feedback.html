@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content='true' name='HandheldFriendly'/>
+  <meta content='width' name='MobileOptimized'/>
+  <meta content='yes' name='apple-mobile-web-app-capable'/>
+  <title>modal feedback</title>
+  <link rel="stylesheet" href="modal-feedback.css">
+</head>
+<body>
+<section class="popup-feedback">
+  <button class="popup-feedback__close"><img src="/img/X.svg" alt=""></button>
+  <h1 class="popup-feedback__title">Обратная связь</h1>
+  <form class="popup-feedback__form">
+    <input class="popup-feedback__input" type="text" placeholder="Имя">
+    <input class="popup-feedback__input" type="tel" placeholder="Телефон">
+    <input class="popup-feedback__input" type="email" placeholder="Электронная почта">
+    <textarea class="popup-feedback__textarea" placeholder="Сообщение"></textarea>
+  </form>
+  <p class="popup-feedback__agreement">Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></p>
+  <button class="popup-feedback__send"><span class="popup-feedback__text">Отправить</span></button>
+</section>
+
+</body>
+</html>
