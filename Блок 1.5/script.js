@@ -12,7 +12,7 @@ function swiperMode() {
         if (!init) {
             init = true;
             swiper = new Swiper('.swiper', {
-                slidesPerView: 2,
+                slidesPerView: "auto",
                 effect: 'coverflow',
                 centeredSlides: true,
                 loop: true,
@@ -79,27 +79,28 @@ window.addEventListener('resize', function() {
 });
 
 
+
 let showAllBrands = document.querySelector(".brands-logo-table__more");
-let hideAllBrands = document.querySelector(".brands-logo-table__less");
 let hiddenBrands = document.querySelectorAll(".hidden-brands")
+let hideAllBrands = document.querySelector(".brands-logo-table__less");
 
 showAllBrands.addEventListener('click', function () {
-    showAllBrands.classList.remove("show");
-    hideAllBrands.classList.add("display-block");
-
+    showAllBrands.classList.toggle("brands-logo-table__more");
+    showAllBrands.classList.toggle("brands-logo-table__less");
 
     for (let i = 0; i < hiddenBrands.length; i++) {
-        hiddenBrands[i].classList.remove("hidden-brands");
-        hiddenBrands[i].classList.add("show-hidden-brands");
+        hiddenBrands[i].classList.toggle("hidden-brands");
+        hiddenBrands[i].classList.toggle("show-hidden-brands");
     }
 });
 
-hideAllBrands.addEventListener('click', function () {
-    showAllBrands.classList.add("show");
-    hideAllBrands.classList.remove("display-block");
-
-    for (let i = 0; i < hiddenBrands.length; i++) {
-        hiddenBrands[i].classList.add("hidden-brands");
-        hiddenBrands[i].classList.remove("show-hidden-brands");
-    }
-});
+// hideAllBrands.addEventListener('click', function () {
+//     showAllBrands.classList.remove("brands-logo-table__less");
+//     showAllBrands.classList.add("brands-logo-table__more");
+//
+//
+//     for (let i = 0; i < hiddenBrands.length; i++) {
+//         hiddenBrands[i].classList.add("hidden-brands");
+//         hiddenBrands[i].classList.remove("show-hidden-brands");
+//     }
+// });

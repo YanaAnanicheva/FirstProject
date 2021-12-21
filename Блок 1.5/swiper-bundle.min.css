@@ -24,8 +24,9 @@
         z-index: 1;
         display: flex;
         transition-property: transform;
-        box-sizing: content-box
         overflow: visible;
+        margin-left: 16px;
+        left: 320px;
     }
 
     .swiper-android .swiper-slide, .swiper-wrapper {
@@ -60,9 +61,9 @@
         transition-property: transform, height
     }
 
-    .swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper {
-        perspective: 1200px
-    }
+    /*.swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper {*/
+    /*    perspective: 1200px*/
+    /*}*/
 
     .swiper-3d .swiper-cube-shadow, .swiper-3d .swiper-slide, .swiper-3d .swiper-slide-shadow, .swiper-3d .swiper-slide-shadow-bottom, .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right, .swiper-3d .swiper-slide-shadow-top, .swiper-3d .swiper-wrapper {
         transform-style: preserve-3d
@@ -605,14 +606,7 @@
         overflow: hidden
     }
 
-
-
-        .swiper {
-            width: 100% !important;
-        }
-
         .swiper-wrapper {
-            width: 100% !important;
             box-sizing: border-box;
         }
 

@@ -40,7 +40,7 @@ button {
     margin-top: 13px;
 }
 
-.brands-logo-table__link:hover{
+.brands-logo-table__link:hover {
     background-color: #FF3E79;
     transition-duration: 0.5s;
 }
@@ -61,6 +61,7 @@ button {
     width: 100%;
     height: 80px;
     background: linear-gradient(to right, #F2F2F2 0%, #FFFFFF 98.61%);
+    border-top: 2px solid #D9FFF5;
 }
 
 .brands-menu-header__text {
@@ -100,6 +101,12 @@ img {
     border-radius: 6px;
     margin-top: 16px;
     margin-left: 16px;
+    cursor: pointer;
+}
+
+
+.brands-logo-table__item:hover {
+    box-shadow: -5px -5px 5px -5px rgba(65, 246, 215, 0.6);
 }
 
 .hidden-brands {
@@ -109,7 +116,7 @@ img {
 .swiper-wrapper__gradient {
     position: absolute;
     width: 30px;
-    height: 90px;
+    height: 100px;
     right: 0;
     top: 87px;
     z-index: 10;
@@ -117,9 +124,15 @@ img {
 }
 
 .brands-logo-table__more {
+    margin-top: 24px;
+    margin-left: 35px;
+    height: 24px;
+    vertical-align: middle;
+}
+.brands-logo-table__more:after {
+    content: "Показать все";
     width: 130px;
     height: 24px;
-
     font-family: "TT Lakes Medium";
     font-style: normal;
     font-weight: 500;
@@ -127,21 +140,22 @@ img {
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
-    margin-top: 24px;
-    margin-left: 24px;
-
-    display: none;
-}
-
-.brands-logo-table__more::before {
-    content: url(img/arrow_down.svg);
-    margin-right: 8px;
-    height: 24px;
-    vertical-align: middle;
+    cursor: pointer;
+    padding-left: 8px;
 }
 
 .brands-logo-table__less {
-    width: 130px;
+    display: inline-block;
+    transform: rotate(180deg);
+    margin-top: 24px;
+    margin-left: 35px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.brands-logo-table__less:before {
+    display: inline-block;
+    content: "Свернуть";
     height: 24px;
     font-family: "TT Lakes Medium";
     font-style: normal;
@@ -150,27 +164,58 @@ img {
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
-    margin-top: 24px;
-    margin-left: 24px;
-
-    display: none;
-}
-
-.brands-logo-table__less::before {
-    display: inline-block;
-    content: url(img/arrow_down.svg);
+    cursor: pointer;
     transform: rotate(180deg);
-    margin-right: 8px;
-    height: 24px;
-    vertical-align: middle;
+    padding-left: 8px;
 }
 
 
 
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (min-width: 250px) and (max-width: 767px) {
     .hidden-brands {
         display: flex;
     }
+
+    .brands-logo-table__more,
+    .brands-logo-table__less {
+        display: none;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        text-align: center;
+        transition: .3s opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 100;
+        margin-top: 20px;
+    }
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: #DDDDDD;
+    }
+
+    .swiper {
+        width: 100%;
+        min-width: 320px;
+        height: auto;
+        padding: 0 15px 15px 15px;
+    }
+
+    .swiper-slide {
+        width: 240px !important;
+        height: 72px;
+    }
+
+    .swiper-wrapper {
+        right: 40px;
+    }
+
+
+
+
+
 }
 
 @media (min-width: 768px) {
@@ -190,18 +235,15 @@ img {
         background: linear-gradient(90deg, #F2F2F2 1.39%, #FFFFFF 100%);
     }
 
-    .show {
-        display: block;
-    }
-
-    .display-block {
-        display: block;
-    }
 
 .show-hidden-brands {
     display: flex;
     flex-wrap: wrap;
 }
+
+    .swiper-pagination-bullet {
+        display: none;
+    }
 
 }
 
