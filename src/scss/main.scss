@@ -121,7 +121,7 @@ button {
 		padding-top: 15px;
 		letter-spacing: -0.6px;
 		&::before {
-			content: url(src/img/highlight.svg);
+			content: url(../img/highlight.svg);
 			padding-right: 3%;
 			height: 40px;
 			vertical-align: middle;
@@ -153,7 +153,7 @@ button {
 		&::-webkit-scrollbar {
 			width: 0;
 		}
-	}
+
 	&__item {
 		display: inline-block;
 		font-family: 'TT Lakes Medium';
@@ -186,6 +186,7 @@ button {
 		text-decoration: none;
 		color: $var8;
 	}
+}
 
 .about-us {
 	box-sizing: border-box;
@@ -427,7 +428,7 @@ text-decoration: none;
 .main__repair::after {
   content: " ";
   display: block;
-  background-image: url(src/img/Repair.svg);
+  background-image: url(../img/Repair.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -454,7 +455,7 @@ justify-content: space-evenly;
 .main__checkstatus::after {
 content: " ";
 display: block;
-background-image: url(src/img/checkstatus.svg);
+background-image: url(../img/checkstatus.svg);
 background-repeat: no-repeat;
 background-position: center center;
 }

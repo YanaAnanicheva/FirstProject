@@ -1,3 +1,14 @@
+@import '../scss/main.scss';
+@import '../scss/brands-menu.scss';
+@import '../scss/menu.scss';
+@import '../scss/modal-call.scss';
+@import '../scss/modal-feedback.scss';
+@import '../scss/services-menu.scss';
+@import '../scss/swiper-bundle.min.css';
+@import '../scss/technology-menu.scss';
+@import '../scss/fonts.scss';
+
+
 $bgColor: #24292e;
 $text: #fff;
 
@@ -15,13 +26,3 @@ body {
   background-color: $bgColor;
   color: $text;
 }
-
-@import 'main.scss';
-@import 'brands-menu.scss';
-@import 'menu.scss';
-@import 'modal-call.scss';
-@import 'modal-feedback.scss';
-@import 'services-menu.scss';
-@import 'swiper-bundle.min.css';
-@import 'technology-menu.scss';
-@import 'fonts.scss';
