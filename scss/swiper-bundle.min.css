@@ -10,7 +10,10 @@
         --swiper-theme-color: #007aff
     }
 
-    .swiper {
+    .swiper-first,
+    .swiper-second,
+    .swiper-third {
+      box-sizing: border-box;
         margin-left: 0;
         margin-right: 0;
         position: relative;
@@ -24,7 +27,7 @@
         z-index: 1;
         display: flex;
         transition-property: transform;
-        box-sizing: content-box
+        box-sizing: content-box;
         overflow: visible;
     }
 
@@ -38,6 +41,11 @@
 
     .swiper-pointer-events.swiper-vertical {
         touch-action: pan-x
+    }
+
+    .swiper-slide {
+        flex-shrink: 0;
+        transition-property: transform
     }
 
     .swiper-slide-invisible-blank {
@@ -368,7 +376,7 @@
     .swiper-scrollbar {
         border-radius: 10px;
         position: relative;
-        -ms-touch-action: none;
+        touch-action: none;
         background: rgba(0, 0, 0, .1)
     }
 
@@ -598,8 +606,11 @@
         overflow: hidden
     }
 
-        .swiper {
-            width: 100vw !important;
+
+        .swiper-first,
+        .swiper-second,
+        .swiper-third {
+            width: 320px !important;
         }
 
         .swiper-wrapper {
@@ -607,17 +618,20 @@
             box-sizing: border-box;
         }
 
-        .swiper-pagination {
+        .swiper-pagination-first,
+        .swiper-pagination-second,
+        .swiper-pagination-third {
             text-align: center;
-            transition: .3s opacity;
+            transition: 0.3s opacity;
             transform: translate3d(0, 0, 0);
             z-index: 100;
             margin-top: 20px;
+            margin-bottom: 15px;
         }
+        
         .swiper-pagination-bullet {
             width: 12px;
             height: 12px;
             background: #DDDDDD;
         }
-
-}
+      }
