@@ -102,6 +102,9 @@ shadowOfWar.addEventListener('click', function () {
   popupFeedbackBlock.classList.add('popup-feedback__unvisible');
   bodySection.classList.remove("overflow-hidden");
 
+  asideMenuBlock.classList.remove('aside-menu__visible');
+  asideMenuBlock.classList.add('aside-menu__unvisible');
+
   shadowOfWar.classList.remove("shadow-of-war__visible");
   shadowOfWar.classList.add("shadow-of-war__unvisible");
 });
