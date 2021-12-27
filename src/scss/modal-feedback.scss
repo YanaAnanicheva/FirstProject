@@ -183,9 +183,60 @@ section {
   }
 
 
+  .popup-call__visible,
+.popup-feedback__visible {
+  right: 0px;
+  transition: right 500ms;
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.popup-call__unvisible,
+.popup-feedback__unvisible {
+  right: -600px;
+  transition: right 500ms;
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.body-blur {
+  filter: blur(7px);
+  transition-duration: 0.5s;
+}
 }
 
 
 
 
 
+
+
+
+
+
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('/fonts/TTLakes-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes Black';
+  src: url('/fonts/TTLakes-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes Medium';
+  src: url('/fonts/TTLakes-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes Regular';
+  src: url('/fonts/TTLakes-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
