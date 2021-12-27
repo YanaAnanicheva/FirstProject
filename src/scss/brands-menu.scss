@@ -1,11 +1,3 @@
-$var1: #FF3E79;
-$var2: #ffffff;
-$var3: #D9FFF5;
-$var4: #7E7E82;
-$var5: #FFFFFF;
-$var6: #EAEAEA;
-$var7: #1B1C21;
-
 .block15 {
 	width: 100vw;
 }
@@ -13,7 +5,7 @@ $var7: #1B1C21;
 	display: inline-block;
 	width: 40px;
 	height: 40px;
-	border: 2px solid $var1;
+	border: 2px solid #FF3E79;
 	box-sizing: border-box;
 	border-radius: 20px;
 	&::before {
@@ -21,7 +13,7 @@ $var7: #1B1C21;
 		display: block;
 		width: 7.5px;
 		height: 7.5px;
-		border: 2px solid $var1;
+		border: 2px solid #FF3E79;
 		border-left: transparent;
 		border-bottom: transparent;
 		transform: rotate(45deg);
@@ -29,10 +21,10 @@ $var7: #1B1C21;
 		margin-top: 13px;
 	}
 	&:hover {
-		background-color: $var1;
+		background-color: #FF3E79;
 		transition-duration: 0.5s;
 		&::before {
-			border: 2px solid $var2;
+			border: 2px solid #ffffff;
 			border-left: transparent;
 			border-bottom: transparent;
 			transition-duration: 0.5s;
@@ -41,29 +33,27 @@ $var7: #1B1C21;
 }
 .brands-logo-table__list {
 	list-style-type: none;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
 }
 .brands-menu-header {
 	box-sizing: border-box;
 	width: 100vw;
 	max-width: 1120px;
 	height: 80px;
-	background: linear-gradient(to right, #F8F8F8 0%, $var5 98.61%);
-	border-top: 2px solid $var3;
-	&__text {
-		box-sizing: border-box;
-		font-family: "TT Lakes Regular";
-		font-size: 16px;
-		font-weight: normal;
-		line-height: 24px;
-		letter-spacing: -0.2px;
-		padding: 16px;
-		color: $var4;
-	}
+	background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 98.61%);
+	border-top: 2px solid #D9FFF5;
 }
-.brands-logo-table__list {
+.brands-menu-header__text {
 	box-sizing: border-box;
-	display: flex;
-	flex-direction: row;
+	font-family: "TT Lakes Regular";
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	padding: 16px;
+	color: #7E7E82;
 }
 img {
 	max-width: 100%;
@@ -78,8 +68,8 @@ img {
 	padding-right: 16px;
 	flex-shrink: 0;
 	align-items: center;
-	background: $var5;
-	border: 1px solid $var6;
+	background: #FFFFFF;
+	border: 1px solid #EAEAEA;
 	border-radius: 6px;
 	margin-top: 16px;
 	margin-left: 14px;
@@ -107,7 +97,7 @@ img {
 		font-size: 16px;
 		line-height: 24px;
 		letter-spacing: -0.2px;
-		color: $var7;
+		color: #1B1C21;
 		cursor: pointer;
 		padding-left: 8px;
 	}
@@ -130,13 +120,12 @@ img {
 		font-size: 16px;
 		line-height: 24px;
 		letter-spacing: -0.2px;
-		color: $var7;
+		color: #1B1C21;
 		cursor: pointer;
 		transform: rotate(180deg);
 		padding-left: 8px;
 	}
 }
-
 
 @media (min-width: 1120px) {
   .block15 {

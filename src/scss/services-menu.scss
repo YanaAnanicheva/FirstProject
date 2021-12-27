@@ -1,25 +1,19 @@
-$var1: #7E7E82;
-$var2: #1B1C21;
-$var3: #FF3E79;
-$var4: #FFFFFF;
-$var5: #D9FFF5;
-
 .services-menu-header {
 	box-sizing: border-box;
 	width: 100vw;
 	max-width: 1120px;
 	height: 56px;
-	background: linear-gradient(to right, #F8F8F8 0%, $var4 98.61%);
-	&__text {
-		box-sizing: border-box;
-		font-family: "TT Lakes Regular";
-		font-size: 16px;
-		font-weight: normal;
-		line-height: 24px;
-		letter-spacing: -0.2px;
-		padding: 16px;
-		color: $var1;
-	}
+	background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 98.61%);
+}
+.services-menu-header__text {
+	box-sizing: border-box;
+	font-family: "TT Lakes Regular";
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	padding: 16px;
+	color: #7E7E82;
 }
 th {
 	all: unset;
@@ -31,53 +25,60 @@ th {
 	font-family: "TT Lakes Medium";
 	font-size: 14px;
 	line-height: 16px;
-	color: $var1;
+	color: #7E7E82;
 	display: flex;
 	justify-content: flex-start;
 }
-.services-section__service, .services-section__price, .services-section__time {
+.services-section__service,
+.services-section__price,
+.services-section__time {
 	font-family: "TT Lakes Regular";
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 0.2px;
-	color: $var2;
+	color: #1B1C21;
 }
-.services-section__service::before {
-	font-family: "TT Lakes Medium";
-	font-size: 14px;
-	line-height: 16px;
-	color: $var1;
-	mix-blend-mode: normal;
-	opacity: 0.72;
-  content: "Ремонтные услуги";
-	display: block;
+.services-section__service {
+	&::before {
+		font-family: "TT Lakes Medium";
+		font-size: 14px;
+		line-height: 16px;
+		color: #7E7E82;
+		mix-blend-mode: normal;
+		opacity: 0.72;
+		content: "Ремонтные услуги";
+		display: block;
+	}
 }
-
-.services-section__price::before {
-	font-family: "TT Lakes Medium";
-	font-size: 14px;
-	line-height: 16px;
-	color: $var1;
-	mix-blend-mode: normal;
-	opacity: 0.72;
-  content: "Цена";
-	display: block;
+.services-section__price {
+	&::before {
+		font-family: "TT Lakes Medium";
+		font-size: 14px;
+		line-height: 16px;
+		color: #7E7E82;
+		mix-blend-mode: normal;
+		opacity: 0.72;
+		content: "Цена";
+		display: block;
+	}
 }
-.services-section__time::before {
-	font-family: "TT Lakes Medium";
-	font-size: 14px;
-	line-height: 16px;
-	color: $var1;
-	mix-blend-mode: normal;
-	opacity: 0.72;
-	content: "Срок";
-	display: block;
+.services-section__time {
+	&::before {
+		font-family: "TT Lakes Medium";
+		font-size: 14px;
+		line-height: 16px;
+		color: #7E7E82;
+		mix-blend-mode: normal;
+		opacity: 0.72;
+		content: "Срок";
+		display: block;
+	}
 }
 .services-section__order {
 	display: block;
 	width: 119px;
 	height: 32px;
-	background: $var3;
+	background: #FF3E79;
 	border-radius: 16px;
 	position: absolute;
 	right: 16px;
@@ -96,7 +97,7 @@ th {
 	text-align: right;
 	letter-spacing: -0.15px;
 	text-transform: uppercase;
-	color: $var4;
+	color: #FFFFFF;
 	margin-top: 5px;
 	margin-left: 12px;
 	&::after {
@@ -104,7 +105,7 @@ th {
 		display: block;
 		width: 4px;
 		height: 4px;
-		border: 2px solid $var4;
+		border: 2px solid #FFFFFF;
 		border-left: transparent;
 		border-bottom: transparent;
 		transform: rotate(45deg);
@@ -119,7 +120,7 @@ th {
 	font-size: 14px;
 	line-height: 20px;
 	letter-spacing: 0.2px;
-	color: $var2;
+	color: #1B1C21;
 }
 .services-section__commercial-proposal {
 	box-sizing: border-box;
@@ -127,7 +128,7 @@ th {
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: -0.2px;
-	color: $var2;
+	color: #1B1C21;
 	display: block;
 	width: 200px;
 	margin: 16px;
@@ -137,7 +138,7 @@ th {
 		display: inline-block;
 		width: 6px;
 		height: 6px;
-		border: 2px solid $var3;
+		border: 2px solid #FF3E79;
 		border-left: transparent;
 		border-bottom: transparent;
 		transform: rotate(45deg);
@@ -151,18 +152,20 @@ th {
 	flex-direction: row;
 	margin: 25px 24px;
 	justify-content: space-between;
-	&__text {
-		font-family: "TT Lakes Medium";
-		font-size: 14px;
-		line-height: 16px;
-		color: $var1;
-		mix-blend-mode: normal;
-		opacity: 0.72;
-	}
 }
-.services-menu-header, .services-menu-footer {
-	border-top: 2px solid $var5;
+.services-menu-footer__text {
+	font-family: "TT Lakes Medium";
+	font-size: 14px;
+	line-height: 16px;
+	color: #7E7E82;
+	mix-blend-mode: normal;
+	opacity: 0.72;
 }
+.services-menu-header,
+.services-menu-footer {
+	border-top: 2px solid #D9FFF5;
+}
+
 
 @media (min-width: 320px) and (max-width: 767px) {
   .hidden-on-320 {
@@ -370,4 +373,3 @@ border-spacing:0px !important;
       margin-left: 110px;
   }
 }
-
