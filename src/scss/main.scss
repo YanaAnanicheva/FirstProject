@@ -12,10 +12,7 @@ body {
 	max-width: 1440px;
 	margin: auto;
 }
-.main-section {
-	width: 100vw;
-	max-width: 1120px;
-}
+
 .page-header {
 	box-sizing: border-box;
 	width: 100vw;
@@ -265,6 +262,23 @@ button {
   overflow-y: hidden;
   }
 
+.shadow-of-war {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.shadow-of-war__unvisible {
+  left: -100%;
+  transition-duration: 0.5s;
+}
+
+.shadow-of-war__visible {
+  left: 0;
+  transition-duration: 0.5s;
+}
 
   @media(min-width: 1120px){
     .main-section {
@@ -274,9 +288,8 @@ button {
 
 
 @media (min-width: 768px) {
-
   .main {
-    min-height: 416px;
+    min-height: 390px;
   }
 
   .main__header {
@@ -363,7 +376,7 @@ button {
 }
 
 .about-us__more {
-margin-left: 30px;
+margin-left: 35px;
 }
 
 .about-us-photo {
@@ -380,6 +393,10 @@ border-radius: 6px;
 
   .main {
     height: 535px ;
+  }
+
+  .nav {
+    margin-bottom: 8px;
   }
 
   .main__repair:hover::after,

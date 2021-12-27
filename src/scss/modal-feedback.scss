@@ -79,6 +79,7 @@ section {
 		height: 118px;
 	}
 }
+
 section .popup-feedback__input,
 section .popup-feedback__textarea {
 	box-sizing: border-box;
@@ -99,22 +100,7 @@ section .popup-feedback__input:focus,
 section .popup-feedback__textarea:focus {
 	border: 1px solid #41F6D7 !important;
 }
-.popup-call__visible,
-.popup-feedback__visible {
-	right: 0px;
-	transition: right 500ms;
-	box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
-}
-.popup-call__unvisible,
-.popup-feedback__unvisible {
-	right: -600px;
-	transition: right 500ms;
-	box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
-}
-.body-blur {
-	filter: blur(7px);
-	transition-duration: 0.5s;
-}
+
 
 @media (min-width: 1120px) {
   body {

@@ -4,6 +4,11 @@
 	height: 100vh;
 	background-color: #fff;
 }
+
+aside button:hover {
+  opacity: 0.8;
+}
+
 ul {
 	list-style-type: none;
 }
@@ -168,11 +173,6 @@ pre {
   left: -500px;
   transition: left 500ms;
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
-}
-
-.body-blur {
-  filter: blur(7px);
-  transition-duration: 0.5s;
 }
 
 .aside-menu__x {

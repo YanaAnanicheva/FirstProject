@@ -33,6 +33,16 @@ a {
 		}
 	}
 }
+
+.tech-logo-table__item:active  .tech-logo-table__link {
+  background-color: #FF3E79;
+}
+.tech-logo-table__item:active  .tech-logo-table__link::before {
+  border: 2px solid #ffffff;
+  border-left: transparent;
+  border-bottom: transparent;
+}
+
 .tech-logo-table__list {
 	list-style-type: none;
 	box-sizing: border-box;
@@ -194,12 +204,15 @@ a {
 
 @media (min-width: 1120px) {
 
-  .tech-logo-table__item  {
-      width: 240px;
-      margin-left: 32px;
+  .tech-logo-table__item {
+    width: 240px;
+    margin-left: 32px;
   }
 
   .hidden-tech:nth-last-child(n+8) {
-      display: flex;
+    display: flex;
   }
+.tech-menu-header__text {
+  padding-left: 30px;
+}
 }

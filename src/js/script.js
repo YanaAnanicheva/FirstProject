@@ -1,7 +1,6 @@
-// Блок 1.4
+
 let bodySection = document.querySelector("body");
-let mainSection = document.querySelector(".main-section");
-let pageSection = document.querySelector(".page");
+let shadowOfWar = document.querySelector(".shadow-of-war");
 
 
 let showAsideMenu = document.querySelector(".page__burger-menu");
@@ -11,22 +10,23 @@ let asideMenuX = document.querySelector(".aside-menu__x");
 showAsideMenu.addEventListener('click', function () {
   asideMenuBlock.classList.remove('aside-menu__unvisible');
   asideMenuBlock.classList.add('aside-menu__visible');
+  shadowOfWar.classList.remove("shadow-of-war__unvisible");
+  shadowOfWar.classList.add("shadow-of-war__visible");
   bodySection.classList.add("overflow-hidden");
-  mainSection.classList.add("body-blur");
 });
 
 asideMenuX.addEventListener('click', function () {
   asideMenuBlock.classList.remove('aside-menu__visible');
   asideMenuBlock.classList.add('aside-menu__unvisible');
+  shadowOfWar.classList.remove("shadow-of-war__visible");
+  shadowOfWar.classList.add("shadow-of-war__unvisible");
   bodySection.classList.remove("overflow-hidden");
-  mainSection.classList.remove("body-blur");
 });
 
 
 let showPopupCall = document.querySelector(".aside-menu__call");
 let popupCallBlock = document.querySelector(".popup-call");
 let popupCallClose = document.querySelector(".popup-call__close");
-let showPopupCallByPagePhone = document.querySelector(".page-phone");
 
 
 showPopupCall.addEventListener('click', function() {
@@ -35,17 +35,19 @@ showPopupCall.addEventListener('click', function() {
   asideMenuBlock.classList.remove('aside-menu__visible');
   asideMenuBlock.classList.add('aside-menu__unvisible');
   bodySection.classList.add("overflow-hidden");
-  asideMenuBlock.classList.add("body-blur");
-  mainSection.classList.add("body-blur");
+  shadowOfWar.classList.remove("shadow-of-war__unvisible");
+  shadowOfWar.classList.add("shadow-of-war__visible");
 });
 
 popupCallClose.addEventListener('click', function () {
   popupCallBlock.classList.remove('popup-call__visible');
   popupCallBlock.classList.add('popup-call__unvisible');
   bodySection.classList.remove("overflow-hidden");
-  asideMenuBlock.classList.remove("body-blur");
-  mainSection.classList.remove("body-blur");
+  shadowOfWar.classList.remove("shadow-of-war__visible");
+  shadowOfWar.classList.add("shadow-of-war__unvisible");
 });
+
+let showPopupCallByPagePhone = document.querySelector(".page-phone");
 
 showPopupCallByPagePhone.addEventListener('click', function() {
   popupCallBlock.classList.remove('popup-call__unvisible');
@@ -53,8 +55,8 @@ showPopupCallByPagePhone.addEventListener('click', function() {
   asideMenuBlock.classList.remove('aside-menu__visible');
   asideMenuBlock.classList.add('aside-menu__unvisible');
   bodySection.classList.add("overflow-hidden");
-  asideMenuBlock.classList.add("body-blur");
-  mainSection.classList.add("body-blur");
+  shadowOfWar.classList.remove("shadow-of-war__unvisible");
+  shadowOfWar.classList.add("shadow-of-war__visible");
 });
 
 
@@ -69,16 +71,16 @@ showPopupFeedback.addEventListener('click', function () {
   asideMenuBlock.classList.remove('aside-menu__visible');
   asideMenuBlock.classList.add('aside-menu__unvisible');
   bodySection.classList.add("overflow-hidden");
-  asideMenuBlock.classList.add("body-blur");
-  mainSection.classList.add("body-blur");
+  shadowOfWar.classList.remove("shadow-of-war__unvisible");
+  shadowOfWar.classList.add("shadow-of-war__visible");
 });
 
 popupClose.addEventListener('click', function () {
   popupFeedbackBlock.classList.remove('popup-feedback__visible');
   popupFeedbackBlock.classList.add('popup-feedback__unvisible');
   bodySection.classList.remove("overflow-hidden");
-  asideMenuBlock.classList.remove("body-blur");
-  mainSection.classList.remove("body-blur");
+  shadowOfWar.classList.remove("shadow-of-war__visible");
+  shadowOfWar.classList.add("shadow-of-war__unvisible");
 });
 
 showPopupFeedbackByPageChat.addEventListener('click', function () {
@@ -87,9 +89,25 @@ showPopupFeedbackByPageChat.addEventListener('click', function () {
   asideMenuBlock.classList.remove('aside-menu__visible');
   asideMenuBlock.classList.add('aside-menu__unvisible');
   bodySection.classList.add("overflow-hidden");
-  asideMenuBlock.classList.add("body-blur");
-  mainSection.classList.add("body-blur");
+  shadowOfWar.classList.remove("shadow-of-war__unvisible");
+  shadowOfWar.classList.add("shadow-of-war__visible");
 });
+
+shadowOfWar.addEventListener('click', function () {
+  popupCallBlock.classList.remove('popup-call__visible');
+  popupCallBlock.classList.add('popup-call__unvisible');
+  bodySection.classList.remove("overflow-hidden");
+
+  popupFeedbackBlock.classList.remove('popup-feedback__visible');
+  popupFeedbackBlock.classList.add('popup-feedback__unvisible');
+  bodySection.classList.remove("overflow-hidden");
+
+  shadowOfWar.classList.remove("shadow-of-war__visible");
+  shadowOfWar.classList.add("shadow-of-war__unvisible");
+});
+
+
+
 
 let showAllText = document.querySelector(".about-us__more");
 let allText = document.querySelector(".about-us__text");
@@ -165,7 +183,7 @@ showAlltech.addEventListener("click", function () {
                 centeredSlides: true,
                 loop: true,
                 direction: 'horizontal',
-  
+
     pagination: {
         el: '.swiper-pagination-second',
     },
@@ -185,7 +203,7 @@ showAlltech.addEventListener("click", function () {
                 centeredSlides: true,
                 loop: true,
                 direction: 'horizontal',
-  
+
     pagination: {
         el: '.swiper-pagination-third',
     },

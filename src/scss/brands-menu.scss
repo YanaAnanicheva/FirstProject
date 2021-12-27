@@ -31,6 +31,16 @@
 		}
 	}
 }
+
+.brands-logo-table__item:active  .brands-logo-table__link {
+  background-color: #FF3E79;
+}
+.brands-logo-table__item:active  .brands-logo-table__link::before {
+  border: 2px solid #ffffff;
+  border-left: transparent;
+  border-bottom: transparent;
+}
+
 .brands-logo-table__list {
 	list-style-type: none;
 	box-sizing: border-box;
@@ -200,5 +210,9 @@ img {
 
   .hidden-brands:nth-last-child(n+4) {
       display: flex;
+  }
+
+  .brands-menu-header__text {
+    margin-left: 30px;
   }
 }

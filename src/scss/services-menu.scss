@@ -152,6 +152,7 @@ th {
 	flex-direction: row;
 	margin: 25px 24px;
 	justify-content: space-between;
+  padding-top: 16px;
 }
 .services-menu-footer__text {
 	font-family: "TT Lakes Medium";
@@ -172,7 +173,7 @@ th {
       display: none;
   }
 
-  
+
   .services-menu-footer {
 width: 320px;
 flex-direction: column;
@@ -326,7 +327,7 @@ border-spacing:0px !important;
 @media (min-width: 1120px) {
 
   .services-menu-header__text {
-      margin-left: 30px;
+    padding-left: 30px;
   }
 
   .services-section__message,
